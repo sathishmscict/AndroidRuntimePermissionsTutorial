@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Runtime Permissions Tutorial</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="permission_contacts_rationale">Contacts permissions are needed to demonstrate access.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="contacts_permission_not_granted">Contacts permissions were NOT granted.</string>
+</resources>
