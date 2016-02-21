@@ -39,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void requestContactsPermissions() {
+        // Should we show an explanation?
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.READ_CONTACTS)) {
-
+            // Show an expanation to the user and try again to request the permission.
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.permission_contacts_rationale);
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setNegativeButton(R.string.cancel, null);
             builder.show();
         } else {
+            // No explanation needed, we can request the permission.
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CONTACTS);
         }
     }
